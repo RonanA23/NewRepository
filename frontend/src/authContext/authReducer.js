@@ -5,6 +5,7 @@ const REGISTER_FAIL ='REGISTER_FAIL'
 export default(state,action)=>{
     switch(action.type){
         case REGISTER_SUCCESS:
+            console.log('great success!')
             localStorage.setItem('token',action.payload.token)
             return{
                 ...state,

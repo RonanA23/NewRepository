@@ -4,6 +4,7 @@ const SET_CURRENT='SET_CURRENT'
 const CLEAR_CURRENT='CLEAR_CURRENT'
 const UPDATE_CONTACT='UPDATE_CONTACT'
 const FILTER='FILTER'
+const GET_CONTACT='GET_CONTACT'
 
 export default(state,action)=>{
     switch(action.type){
@@ -42,6 +43,11 @@ export default(state,action)=>{
                     return contact.name.match(regex)|| contact.email.match(regex)
                 })
             }
+        case GET_CONTACT:
+            return{
+            ...state,
+            contacts:action.payload
+        }
             default:
                  return state;
     }

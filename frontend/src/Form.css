@@ -7,3 +7,13 @@
 .form > button {
   background-color: green;
 }
+
+input {
+  border: 1px solid gray;
+  width: 270px;
+  margin-left: 180px;
+}
+
+form > h2 {
+  margin-left: 180px;
+}

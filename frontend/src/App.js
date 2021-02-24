@@ -9,6 +9,7 @@ import About from './About.js'
 import{BrowserRouter as Router,Route,Switch} from 'react-router-dom'
 import Register from './Register'
 import Login from './Login'
+import PrivateRoute from './routing/PrivateRoute'
 
 function App() {
   return (
@@ -18,23 +19,14 @@ function App() {
       <div className="App">
       <Navbar/>
         <Switch>
-         <Route exact path='/'>
-           <Home/>
-           </Route>
-           <Route path='/about'>
-             <About/>
-             </Route>
-             <Route path='/register'>
-               <Register/>
-             </Route>
-             <Route path='/login'>
-               <Login/>
-             </Route>
+         <PrivateRoute exact path='/'component={Home} />
+           <Route exact path='/about' component={About}/>
+             <Route path='/register' component={Register}/>
+             <Route path='/login' component={Login}/>
         </Switch>
         </div>
       </Router>
     </ContactState>
-
     </AuthState>
     
   );

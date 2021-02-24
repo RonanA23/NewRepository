@@ -28,6 +28,8 @@ function Register() {
        
     }
     return (
+        <div>
+        <h1>Account<span>Register</span></h1>
         <form className='form' onSubmit={onSubmit}>
             <label 
             htmlFor="name">Name:</label>
@@ -55,6 +57,7 @@ function Register() {
             onChange={onChange}/>
             <input type='submit' value ='Register' className='Enter'/>
         </form>
+        </div>
     )
 }
 

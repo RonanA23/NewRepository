@@ -1,11 +1,15 @@
-import React,{useContext,useState} from 'react'
+import React,{useContext,useState,useEffect} from 'react'
 import ContactContext from './context/contactContext'
 import ContactItems from './ContactItems'
 
 const Contacts=()=> {
     const contactContext=useContext(ContactContext)
-    const{contacts,filtered,filter} = contactContext
+    const{contacts,filtered,filter,getContact} = contactContext
     const[search,setSearch]=useState('')
+
+    useEffect(()=>{
+        getContact()
+    })
 
     const onChange=e=>{
         setSearch(e.target.value)
