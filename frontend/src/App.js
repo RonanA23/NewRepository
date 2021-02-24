@@ -16,11 +16,11 @@ function App() {
     <AuthState>
       <ContactState>
       <Router>
-      <div className="App">
       <Navbar/>
+      <div className="App">
         <Switch>
-         <PrivateRoute exact path='/'component={Home} />
-           <Route exact path='/about' component={About}/>
+             <PrivateRoute exact path='/' component={Home} />
+             <Route exact path='/about' component={About}/>
              <Route path='/register' component={Register}/>
              <Route path='/login' component={Login}/>
         </Switch>
