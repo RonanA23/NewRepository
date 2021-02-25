@@ -21,8 +21,8 @@ function App() {
         <Switch>
              <PrivateRoute exact path='/' component={Home} />
              <Route exact path='/about' component={About}/>
-             <Route path='/register' component={Register}/>
-             <Route path='/login' component={Login}/>
+             <Route exact path='/register' component={Register}/>
+             <Route exact path='/login' component={Login}/>
         </Switch>
         </div>
       </Router>
